@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Navigation Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+
+<!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="headerWrapper">
+	<header id="top">
+        <a href="#" class="logo-link"><img src="images/logo1x.png" alt="site logo" width="45" height="50" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+		<span>College University</span>
+        <a href="#navlinks">&#9776;</a>
+	</header>
+</div><!-- end header wrapper -->
+
+    
+    
+<div id="navWrapper">
+    <nav id="navlinks">
+        <a href="#top">&#10005;</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li class="active"><a href="#">Application</a></li>
+            <li><a href="#">Staff</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div> <!-- end nav wrapper -->
+
+<div id="mainWrapper">
+    <main>
+
+        <h1>Application</h1>
+        <form method="GET" action="thanks.html" class="my-form" autocomplete="on">
+        <h3>Personal Information</h3>
+        <label>First Name: <input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></label>
+        <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label>
+        <label>Email: <input type="email" name="email" autocomplete="email" required title="Email Address"></label>
+        <label>Cell Phone: <input type="tel" name="phone" autocomplete="tel" required title="Cell Phone"></label>
+
+        <h3>Address</h3>
+        <label>Address: <input type="text" name="address" autocomplete="address" required title="Address Here"></label>
+        <label>City: <input type="text" name="city" autocomplete="home city" required title="City Here"></label>
+        <label>State: <input type="text" name="state" autocomplete="home state" required title="State"></label>
+        <label>Zip: <input type="text" name="zip" autocomplete="home zipcode" required title="Zipcode"></label>
+
+        <h3>Previous School</h3>
+        <label>
+            <select name="Experience">
+                <option>Previous School</option>
+                <option value="Cool High School">Cool High School</option>
+                <option value="Cooler High School">Cooler High School</option>
+                <option value="Coolest High School">Coolest High School</option>
+            </select>
+        </label>
+
+        <h3>Education Completed:</h3>
+        <label><input type="checkbox" name="GED">GED</label>
+        <label><input type="checkbox" name="High School Diploma">High School Diploma</label>
+        <label><input type="checkbox" name="Associates Degree">Associates Degree</label>
+
+        <h3>How Should We Contact You?</h3>
+        <label><input type="radio" name="contact" value="New">Email</label>
+        <label><input type="radio" name="contact" value="Used">Phone Call</label>
+        <label><input type="radio" name="contact" value="Certified">Text Message</label>
+
+        <label>Username (6 or more)<input type="text" required minlength="6" title="Please enter a UserName that is at least 6 characters long"></label>
+        <label>Password (5-9 letters or numbers)<input type="password" name="password" required pattern="[A-Za-z0-0]{5,9}" title="5-9 letters or numbers please"></label>
+            <input type="submit" value="Submit Application">
+
+        </form>
+    </main>
+</div><!-- end main wrapper -->
+    
+<div id="footerWrapper">
+    <footer>
+        <p>Copyright &copy; 2025 Jason Garcia All rights reserved. 
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a></p>
+    </footer>
+</div> <!-- end footer wrapper -->
+   
+</body>
+</html> 
