@@ -104,18 +104,20 @@ main {
 form.my-form {
     margin: 1rem $gutter;
 
-    label{
+    label {
         display: block;
-        font-size: .8rem;
+        font-size: 0.8rem;
         color: darkslategray;
-        padding-top: .2rem;
+        padding-top: 0.2rem;
     }
-    h3{
-        font-size: .9rem;
+
+    h3 {
+        font-size: 0.9rem;
         color: darkolivegreen;
-        margin: 1.5rem 0 .2rem 0;
+        margin: 1.5rem 0 0.2rem 0;
         border-bottom: 1px solid #eee;
     }
+
     input[type=text],
     input[type=tel],
     input[type=number],
@@ -123,7 +125,7 @@ form.my-form {
     input[type=password],
     select {
         display: block;
-        margin: .1rem 0 1rem 0;
+        margin: 0.1rem 0 1rem 0;
         border: 1px solid #999;
         border-radius: 3px 10px 10px 3px;
         border-bottom-width: 5px;
@@ -131,24 +133,37 @@ form.my-form {
         font-size: 1rem;
         color: $textColor;
         width: 250px;
-        padding: .5rem $gutter;
+        padding: 0.5rem $gutter;
+
+        /* Scoped Validation Styles */
+        &:required {
+            border-bottom-color: red;
+        }
+
+        &:focus {
+            border-bottom-color: grey;
+        }
+
+        &:required:valid {
+            border-bottom-color: green;
+        }
+    }
+
+    /* Submit Button Styling */
+    input[type=submit] {
+        border: none;
+        background-color: $textColor;
+        color: white;
+        border-radius: 1rem;
+        padding: 0.75rem 1.5rem;
+        margin: 2rem 0;
+        width: 250px;
+        font-size: 1.2rem;
+        -webkit-appearance: none;
+        appearance: none;
     }
 }
-input:required {border-bottom-color: red;}
-input:focus{border-bottom-color:grey;}
-input:required:valid{border-bottom-color: green;}
-input[type=submit] {
-    border: none;
-    background-color: $textColor;
-    color: white;
-    border-radius: 1rem;
-    padding: .75rem 1.5rem;
-    margin: 2rem 0;
-    width: 250px;
-    font-size: 1.2rem;
-    -webkit-appearance: none;
-    appearance: none;
-}
+
 
 
 

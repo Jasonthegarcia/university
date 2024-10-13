@@ -395,6 +395,7 @@ main p {
 
 form.my-form {
   margin: 1rem 10px;
+  /* Submit Button Styling */
 }
 form.my-form label {
   display: block;
@@ -424,21 +425,33 @@ form.my-form select {
   color: darkred;
   width: 250px;
   padding: 0.5rem 10px;
+  /* Scoped Validation Styles */
 }
-
-input:required {
+form.my-form input[type=text]:required,
+form.my-form input[type=tel]:required,
+form.my-form input[type=number]:required,
+form.my-form input[type=email]:required,
+form.my-form input[type=password]:required,
+form.my-form select:required {
   border-bottom-color: red;
 }
-
-input:focus {
+form.my-form input[type=text]:focus,
+form.my-form input[type=tel]:focus,
+form.my-form input[type=number]:focus,
+form.my-form input[type=email]:focus,
+form.my-form input[type=password]:focus,
+form.my-form select:focus {
   border-bottom-color: grey;
 }
-
-input:required:valid {
+form.my-form input[type=text]:required:valid,
+form.my-form input[type=tel]:required:valid,
+form.my-form input[type=number]:required:valid,
+form.my-form input[type=email]:required:valid,
+form.my-form input[type=password]:required:valid,
+form.my-form select:required:valid {
   border-bottom-color: green;
 }
-
-input[type=submit] {
+form.my-form input[type=submit] {
   border: none;
   background-color: darkred;
   color: white;
